@@ -27,6 +27,11 @@
             let player;
             let star;
             let score = 0;
+            let bg;
+
+            function preload() {
+                bg = loadImage("Cemetary.jpg");
+            }
 
             function setup() {
                 const canvas = createCanvas(1000, 1000);
@@ -36,7 +41,7 @@
             }
 
             function draw() {
-                background(220);
+                background(bg);
                 player.update();
                 player.show();
                 star.show();
